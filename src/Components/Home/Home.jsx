@@ -1,7 +1,7 @@
-function About() {
+function Home() {
   return (
     <>
-      <h3>Chi siamo</h3>
+      <h3>Benvenuti!</h3>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
         rerum soluta aspernatur accusamus. Qui, deserunt.
@@ -10,4 +10,4 @@ function About() {
   );
 }
 
-export default About;
+export default Home;

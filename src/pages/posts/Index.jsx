@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "../../Components/Card/Card";
 
 function Index() {
+  //
   const [posts, setPosts] = useState();
 
   function fetchPosts() {
     axios
       .get("http://localhost:3000/posts")
+
       .then((res) => {
-        setPosts(res.data);
+        console.log(res.data);
+
+        setPosts(res.data.posts);
       })
       .catch((err) => {
         console.error(err);
@@ -16,8 +21,10 @@ function Index() {
   }
 
   useEffect(() => {
-    fetchPosts;
+    fetchPosts();
   }, []);
+
+  console.log(posts);
 
   return (
     <>
@@ -26,7 +33,7 @@ function Index() {
           <div className="container">
             <h1>I tuoi post</h1>
           </div>
-          <div className="container">{posts}</div>
+          <div className="container"></div>
         </section>
       </main>
     </>
